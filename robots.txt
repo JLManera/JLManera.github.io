@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jlmanera.github.io/sitemap.xml
