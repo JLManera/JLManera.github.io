@@ -1325,16 +1325,30 @@
         });
     });
 
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
+    const fadeEls = document.querySelectorAll('.fade-in');
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -50px 0px' });
+
+        fadeEls.forEach(el => observer.observe(el));
+    } else {
+        fadeEls.forEach(el => el.classList.add('visible'));
+    }
+
+    // Failsafe: reveal everything after 2 seconds no matter what.
+    // This catches Googlebot (which doesn't scroll) and any edge cases.
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
+            el.classList.add('visible');
+        });
+    }, 2000);
 </script>
 </body>
 </html>
