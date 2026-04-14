@@ -883,6 +883,16 @@
             transform: translateY(0);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
+
+        .js-enabled .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .js-enabled .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -1280,6 +1290,8 @@
 </footer>
 
 <script>
+    document.documentElement.classList.add('js-enabled');
+
     // Mobile menu toggle
     function toggleMenu() {
         document.getElementById('navLinks').classList.toggle('open');
@@ -1312,6 +1324,17 @@
             }
         });
     });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
