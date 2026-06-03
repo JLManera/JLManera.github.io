@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="ocW_fs3DSplbLcumxGvwi3SsxiPqHrbYVwd_mIqw1qg" />
-    <title>Jack Manera</title>
+    <title>Jack Manera | About</title>
     <meta name="description" content="Jack Manera is an early-career researcher in behavioural ecology and ecotoxicology at Monash University, investigating how anthropogenic disturbances alter the behaviour of aquatic animals.">
     <meta name="keywords" content="Jack Manera, behavioural ecology, ecotoxicology, pharmaceutical pollution, aquatic behaviour, Monash University">
     <!-- Open Graph (for link previews) -->
     <meta property="og:title" content="Jack Manera | Behavioural Ecology & Ecotoxicology">
     <meta property="og:description" content="PhD candidate at Monash University studying how pharmaceutical pollutants reshape behaviour and cognition in aquatic animals.">
-    <meta property="og:url" content="https://jlmanera.github.io/">
+    <meta property="og:url" content="https://www.jackmanera.com/">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.jackmanera.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -23,7 +24,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Jack L. Manera",
-        "url": "https://jlmanera.github.io/",
+        "url": "https://www.jackmanera.com/",
         "jobTitle": "PhD Candidate",
         "affiliation": {
             "@type": "Organization",
@@ -155,13 +156,13 @@
             position: absolute;
             inset: 0;
             background: url('photos/landscape_photo_of_river.jpg') center/cover;
-            opacity: 0.2;
+            opacity: 0.35;
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(15,61,37,0.85) 0%, rgba(26,94,58,0.75) 50%, rgba(58,124,165,0.7) 100%);
+            background: linear-gradient(135deg, rgba(15,61,37,0.72) 0%, rgba(26,94,58,0.62) 50%, rgba(58,124,165,0.57) 100%);
         }
 
         .hero-content {
@@ -248,6 +249,11 @@
             padding: 5rem 2rem;
         }
 
+        /* For subpages without a hero, add space below the fixed nav */
+        section.first-section {
+            padding-top: 8rem;
+        }
+
         .section-inner {
             max-width: 1100px;
             margin: 0 auto;
@@ -321,74 +327,6 @@
             text-decoration: underline;
         }
 
-        /* ── Research ── */
-        #research {
-            background: var(--bg);
-        }
-
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .research-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .research-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .research-card .card-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.2rem;
-            font-size: 1.3rem;
-        }
-
-        .research-card .card-icon.green { background: rgba(26,94,58,0.1); color: var(--primary); }
-        .research-card .card-icon.blue { background: rgba(58,124,165,0.1); color: var(--accent); }
-        .research-card .card-icon.teal { background: rgba(0,128,128,0.1); color: teal; }
-        .research-card .card-icon.amber { background: rgba(180,130,20,0.1); color: #b48214; }
-
-        .research-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: var(--text);
-        }
-
-        .research-card p {
-            font-size: 0.92rem;
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        .research-card .status-badge {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            margin-top: 1rem;
-        }
-
-        .status-badge.published { background: rgba(26,94,58,0.1); color: var(--primary); }
-        .status-badge.review { background: rgba(58,124,165,0.1); color: var(--accent); }
-        .status-badge.active { background: rgba(180,130,20,0.1); color: #b48214; }
-        .status-badge.planning { background: rgba(150,150,150,0.1); color: #888; }
-
         /* ── Gallery ── */
         #gallery {
             background: var(--white);
@@ -441,169 +379,7 @@
             opacity: 1;
         }
 
-        /* ── Publications ── */
-        #publications {
-            background: var(--bg);
-        }
-
-        .pub-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .pub-item {
-            background: var(--white);
-            padding: 1.5rem 2rem;
-            border-radius: var(--radius);
-            border: 1px solid rgba(0,0,0,0.04);
-            transition: var(--transition);
-        }
-
-        .pub-item:hover {
-            box-shadow: var(--shadow);
-        }
-
-        .pub-year {
-            display: inline-block;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--white);
-            background: var(--primary);
-            padding: 0.15rem 0.6rem;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
-        }
-
-        .pub-title {
-            font-weight: 600;
-            font-size: 1rem;
-            color: var(--text);
-            margin-bottom: 0.4rem;
-            line-height: 1.5;
-        }
-
-        .pub-title a {
-            color: var(--text);
-            text-decoration: none;
-        }
-
-        .pub-title a:hover {
-            color: var(--accent);
-        }
-
-        .pub-authors {
-            font-size: 0.88rem;
-            color: var(--text-light);
-            margin-bottom: 0.3rem;
-        }
-
-        .pub-authors .me {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .pub-journal {
-            font-size: 0.88rem;
-            color: var(--text-lighter);
-            font-style: italic;
-        }
-
-        /* ── Software ── */
-        #software {
-            background: var(--white);
-        }
-
-        .software-card {
-            background: var(--bg);
-            border-radius: var(--radius);
-            padding: 2.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            border: 1px solid rgba(0,0,0,0.06);
-        }
-
-        .software-info h3 {
-            font-family: 'Lora', serif;
-            font-size: 1.8rem;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-        }
-
-        .software-info h3 code {
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            background: rgba(26,94,58,0.08);
-            padding: 0.1rem 0.5rem;
-            border-radius: 4px;
-            color: var(--primary);
-        }
-
-        .software-info .lang-badge {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--accent);
-            background: rgba(58,124,165,0.1);
-            padding: 0.2rem 0.75rem;
-            border-radius: 20px;
-            margin-bottom: 1rem;
-        }
-
-        .software-info p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .software-info .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.7rem 1.5rem;
-            background: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .software-info .btn:hover {
-            background: var(--primary-light);
-        }
-
-        .software-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .feature-item {
-            background: var(--white);
-            padding: 1.25rem;
-            border-radius: 6px;
-            text-align: center;
-        }
-
-        .feature-item i {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .feature-item span {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            line-height: 1.4;
-            display: block;
-        }
-
-        /* ── Service ── */
+        /* ── Service / Roles ── */
         #service {
             background: var(--bg);
         }
@@ -707,101 +483,6 @@
             line-height: 1.6;
         }
 
-        /* ── Contact ── */
-        #contact {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: var(--white);
-        }
-
-        #contact .section-title {
-            color: var(--white);
-        }
-
-        #contact .section-subtitle {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info p {
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-details a {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        .contact-details a:hover {
-            color: var(--white);
-        }
-
-        .contact-details i {
-            width: 20px;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: rgba(255,255,255,0.15);
-            border-color: rgba(255,255,255,0.5);
-        }
-
-        .contact-map {
-            background: rgba(255,255,255,0.1);
-            border-radius: var(--radius);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .contact-map h3 {
-            font-family: 'Lora', serif;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-map p {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
         /* ── Footer ── */
         footer {
             background: var(--primary-dark);
@@ -857,13 +538,7 @@
             }
 
             .about-grid,
-            .cv-grid,
-            .contact-grid,
-            .software-card {
-                grid-template-columns: 1fr;
-            }
-
-            .research-grid {
+            .cv-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -873,10 +548,6 @@
 
             .service-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .software-features {
-                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -903,19 +574,15 @@
 <!-- Navigation -->
 <nav id="navbar">
     <div class="nav-inner">
-        <a href="#" class="nav-brand">Jack L. Manera</a>
+        <a href="index.html" class="nav-brand">Jack L. Manera</a>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#gallery">Fieldwork</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#software">Software</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#cv">CV</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="active">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -990,192 +657,10 @@
     </div>
 </section>
 
-<!-- Research Section -->
-<section id="research">
-    <div class="section-inner">
-        <h2 class="section-title fade-in">Research</h2>
-        <p class="section-subtitle fade-in">Investigating how anthropogenic disturbances reshape behaviour and cognition in aquatic animals</p>
-        <div class="research-grid">
-            <div class="research-card fade-in">
-                <div class="card-icon green"><i class="fas fa-users"></i></div>
-                <h3>Pharmaceutical Pollutants &amp; Collective Behaviour</h3>
-                <p>Investigating how the benzodiazepine temazepam disrupts shoaling dynamics, collective motion, and local interaction rules in guppies. Exposure alters alignment, cohesion, and velocity in a dose- and phenotype-dependent manner, revealing that group composition modulates vulnerability to contamination.</p>
-                <span class="status-badge active">In preparation</span>
-            </div>
-            <div class="research-card fade-in">
-                <div class="card-icon blue"><i class="fas fa-brain"></i></div>
-                <h3><a href="https://doi.org/10.1021/acs.est.6c00552" target="_blank" style="color: inherit;">Neuroactive Pollution &amp; Spatial Cognition</a></h3>
-                <p>Testing whether the antidepressant amitriptyline impairs spatial learning in wild-caught guppies. Using repeated-trial maze assays, I found sex-specific cognitive impairment: exposed males make significantly more navigational errors, while female learning remains unaffected.</p>
-                <span class="status-badge published">Published &mdash; ES&amp;T</span>
-            </div>
-            <div class="research-card fade-in">
-                <div class="card-icon teal"><i class="fas fa-exclamation-triangle"></i></div>
-                <h3>Fear Contagion &amp; Pharmaceutical Contamination</h3>
-                <p>Examining whether amitriptyline disrupts socially transmitted antipredator responses (fear contagion) in guppies. Exposed observers show impaired behavioural coupling with demonstrators and slower recovery dynamics when relying solely on social information.</p>
-                <span class="status-badge active">Current focus &mdash; In preparation</span>
-            </div>
-            <div class="research-card fade-in">
-                <div class="card-icon amber"><i class="fas fa-exchange-alt"></i></div>
-                <h3>Interspecific Information Transfer</h3>
-                <p>An upcoming study assessing whether invasive guppies can eavesdrop on antipredator cues from native Australian rainbowfish, and whether pharmaceutical pollutants disrupt this cross-species social learning&mdash;with implications for invasion ecology and conservation.</p>
-                <span class="status-badge planning">In planning</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery">
-    <div class="section-inner">
-        <h2 class="section-title fade-in">Fieldwork &amp; Research</h2>
-        <p class="section-subtitle fade-in">From tropical streams to temperate marine habitats</p>
-        <div class="gallery-grid fade-in">
-            <div class="gallery-item tall">
-                <img src="photos/me_sorting_in_field.jpg" alt="Jack sorting fish specimens in the field">
-                <div class="caption">Processing fish specimens during fieldwork</div>
-            </div>
-            <div class="gallery-item">
-                <img src="photos/landscape_photo_of_river.jpg" alt="Li Jiang">
-                <div class="caption">Li Jiang</div>
-            </div>
-            <div class="gallery-item">
-                <img src="photos/galaxias_brevipinnis.jpg" alt="Galaxias brevipinnis - climbing galaxias">
-                <div class="caption"><em>Galaxias brevipinnis</em> &mdash; Climbing galaxias</div>
-            </div>
-            <div class="gallery-item">
-                <img src="photos/team_marine_fish_collection.jpg" alt="Research team during marine fish collection">
-                <div class="caption">Marine fish collection with the team</div>
-            </div>
-            <div class="gallery-item">
-                <img src="photos/team_aquatic_fish_collection.jpg" alt="Team collecting fish at a freshwater site">
-                <div class="caption">Freshwater fish collection in northern Australia</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Publications Section -->
-<section id="publications">
-    <div class="section-inner">
-        <h2 class="section-title fade-in">Publications</h2>
-        <p class="section-subtitle fade-in">Peer-reviewed journal articles</p>
-        <div class="pub-list">
-
-            <!-- New paper not yet on Scholar -->
-            <div class="pub-item fade-in">
-                <span class="pub-year">2026</span>
-                <div class="pub-title"><a href="https://doi.org/10.1021/acs.est.6c00552" target="_blank">Neuroactive pollution disrupts cognition in fish by causing sex-specific effects on spatial learning</a></div>
-                <div class="pub-authors"><span class="me">Manera, J.L.</span>, Moore, E.R., Martin, J.M., Bertram, M.G., Wong, B.B.M.</div>
-                <div class="pub-journal">Environmental Science &amp; Technology</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2026</span>
-                <div class="pub-title">Environmentally safe and just pharmacy: a framework and action plan for operating within the earth system boundary for novel entities</div>
-                <div class="pub-authors">Boxall, A.B.A., Amerasinghe, P., Bertram, M.G., Gaw, S., Gray, A.D., Kidd, K., Langan, L.M., Leung, K.M.Y., <span class="me">Manera, J.L.</span>, Miglioranza, K.S.B., Oldenkamp, R., Brooks, B.W.</div>
-                <div class="pub-journal">Environmental Science &amp; Technology</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2026</span>
-                <div class="pub-title">Exposure to the oestrogenic pollutant 17&alpha;-ethinyl estradiol (EE2) does not alter the behaviour of a coastal marine fish, <em>Cristiceps australis</em></div>
-                <div class="pub-authors">Ozeki, S., Eastment, R.V., <span class="me">Manera, J.L.</span>, Rafeeq, R., Peters, A., Martin, J.M., Wong, B.B.M.</div>
-                <div class="pub-journal">Ethology</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2025</span>
-                <div class="pub-title"><a href="https://doi.org/10.1093/beheco/araf110" target="_blank">Boat noise alters individual behaviors but not communication between partners in a fish-shrimp mutualism</a></div>
-                <div class="pub-authors"><span class="me">Manera, J.L.</span>, Martin, J.M., Palacios, M.M., Mason, R.T., McCormick, M.I., Wong, B.B.M.</div>
-                <div class="pub-journal">Behavioral Ecology, 36(5), araf110</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2025</span>
-                <div class="pub-title">Are behavioral ecotoxicity endpoints relevant at the population level? Evidence-based insights for environmental protection</div>
-                <div class="pub-authors">Bertram, M.G., &Aring;gerstrand, M., Balshine, S., Brand, J.A., Brooks, B.W., Dang, Z., Ford, A.T., Hollert, H., LeFauve, M.K., <span class="me">Manera, J.L.</span>, Martin, J.M., Michelangeli, M., Moiron, M., Moore, E.R., Puglis, H.J., Sih, A., Steevens, J.A., Thor&eacute;, E.S.J., Wong, B.B.M., Zink, L., Brodin, T.</div>
-                <div class="pub-journal">Environmental Science &amp; Technology</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2025</span>
-                <div class="pub-title">The impacts of pesticide exposure on fish conspecific interactions: a systematic review and meta-analysis</div>
-                <div class="pub-authors">Morrison, K., Melhado, G., Bose, A.P.H., Eastment, R., Lagisz, M., <span class="me">Manera, J.L.</span>, Michelangeli, M., Ozeki, S., Wong, B.B.M., Yang, Y., Nakagawa, S.</div>
-                <div class="pub-journal">Environmental Pollution</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2025</span>
-                <div class="pub-title">Sex-specific effect of long-term fluoxetine exposure on inhibitory control in guppies (<em>Poecilia reticulata</em>)</div>
-                <div class="pub-authors">Vinogradov, I.M., Aich, U., <span class="me">Manera, J.L.</span>, Fergusson, K.N., Jennions, M.D., Wong, B.B.M.</div>
-                <div class="pub-journal">Behavioral Ecology and Sociobiology</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2024</span>
-                <div class="pub-title"><a href="https://doi.org/10.1016/j.scitotenv.2024.173055" target="_blank">Anthropogenic noise disrupts early-life development in a fish with paternal care</a></div>
-                <div class="pub-authors">Blom, E.L., Dekhla, I.K., Bertram, M.G., <span class="me">Manera, J.L.</span>, Kvarnemo, C., Svensson, O.</div>
-                <div class="pub-journal">Science of the Total Environment, 935, 173055</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2023</span>
-                <div class="pub-title"><a href="https://doi.org/10.1111/eth.13403" target="_blank">No evidence that the widespread environmental contaminant caffeine alters energy balance or stress responses in fish</a></div>
-                <div class="pub-authors">Tan, H., Brand, J.A., Clarke, B.O., <span class="me">Manera, J.L.</span>, Martin, J.M., Wong, B.B.M., Alton, L.A.</div>
-                <div class="pub-journal">Ethology, 129, 666&ndash;678</div>
-            </div>
-
-            <div class="pub-item fade-in">
-                <span class="pub-year">2023</span>
-                <div class="pub-title">Increased noise levels cause behavioural and distributional changes in Atlantic cod and saithe in a large public aquarium&mdash;A case study</div>
-                <div class="pub-authors">Andersson, M., Svensson, O., Swartz, T., <span class="me">Manera, J.L.</span>, Bertram, M.G., Blom, E.L.</div>
-                <div class="pub-journal">Aquaculture, Fish and Fisheries</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Software Section -->
-<section id="software">
-    <div class="section-inner">
-        <h2 class="section-title fade-in">Software</h2>
-        <p class="section-subtitle fade-in">Open-source tools for the research community</p>
-        <div class="software-card fade-in">
-            <div class="software-info">
-                <h3><code>cleanRfish</code></h3>
-                <span class="lang-badge"><i class="fab fa-r-project"></i>&ensp;R Package</span>
-                <p>
-                    An R package for reconstructing fragmented animal tracking trajectories from video-based tracking systems like EthoVision and idtracker.ai. Uses bidirectional, uncertainty-weighted spline propagation with Ornstein&ndash;Uhlenbeck modelling to detect anomalies, identify reliable anchor segments, and iteratively reconstruct complete paths while enforcing biological plausibility constraints.
-                </p>
-                <a href="https://github.com/JLManera/cleanRfish" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-            </div>
-            <div class="software-features">
-                <div class="feature-item">
-                    <i class="fas fa-route"></i>
-                    <span>Trajectory reconstruction</span>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-search"></i>
-                    <span>Anomaly detection</span>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Diagnostic visualisations</span>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-video"></i>
-                    <span>Video overlay support</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Service Section -->
+<!-- Roles Section -->
 <section id="service">
     <div class="section-inner">
-        <h2 class="section-title fade-in">Professional Service</h2>
+        <h2 class="section-title fade-in">Roles</h2>
         <p class="section-subtitle fade-in">Contributing to the scientific community</p>
         <div class="service-grid">
             <div class="service-card fade-in">
@@ -1253,37 +738,29 @@
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact">
+<!-- Gallery Section (no heading) -->
+<section id="gallery">
     <div class="section-inner">
-        <h2 class="section-title fade-in">Get in Touch</h2>
-        <p class="section-subtitle fade-in">I'm always happy to chat about research, collaboration, or science communication</p>
-        <div class="contact-grid">
-            <div class="contact-info fade-in">
-                <p>Whether you're interested in behavioural ecotoxicology, have questions about my R package, or want to discuss potential collaboration, feel free to reach out.</p>
-                <div class="contact-details">
-                    <a href="mailto:Jack.Manera@monash.edu"><i class="fas fa-envelope"></i> Jack.Manera@monash.edu</a>
-                    <a href="https://www.monash.edu/science/schools/biological-sciences" target="_blank"><i class="fas fa-university"></i> School of Biological Sciences, Monash University</a>
-                    <a href="https://www.bobwonglab.org/" target="_blank"><i class="fas fa-flask"></i> Behavioural Ecology Research Group (Wong Lab)</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://scholar.google.com.au/citations?user=ed1qm2EAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://github.com/JLManera" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://orcid.org/0009-0003-7947-6473" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-                    <a href="https://bsky.app/profile/jackmanera.bsky.social" target="_blank" title="Bluesky"><i class="fab fa-bluesky"></i></a>
-                    <a href="https://twitter.com/jack_manera" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://au.linkedin.com/in/jack-manera-bb162b118" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item tall">
+                <img src="photos/me_sorting_in_field.jpg" alt="Jack sorting fish specimens in the field">
+                <div class="caption">Processing fish specimens during fieldwork</div>
             </div>
-            <div class="contact-map fade-in">
-                <h3>Location</h3>
-                <p>
-                    School of Biological Sciences<br>
-                    Monash University<br>
-                    Clayton Campus<br>
-                    Melbourne, Victoria 3800<br>
-                    Australia
-                </p>
+            <div class="gallery-item">
+                <img src="photos/landscape_photo_of_river.jpg" alt="Li Jiang">
+                <div class="caption">Li Jiang</div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/galaxias_brevipinnis.jpg" alt="Galaxias brevipinnis - climbing galaxias">
+                <div class="caption"><em>Galaxias brevipinnis</em> &mdash; Climbing galaxias</div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/team_marine_fish_collection.jpg" alt="Research team during marine fish collection">
+                <div class="caption">Marine fish collection with the team</div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/team_aquatic_fish_collection.jpg" alt="Team collecting fish at a freshwater site">
+                <div class="caption">Freshwater fish collection in northern Australia</div>
             </div>
         </div>
     </div>
@@ -1312,21 +789,6 @@
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             document.getElementById('navLinks').classList.remove('open');
-        });
-    });
-
-    // Active nav link highlighting
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset;
-        sections.forEach(section => {
-            const top = section.offsetTop - 100;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-            if (link) {
-                link.classList.toggle('active', scrollY >= top && scrollY < top + height);
-            }
         });
     });
 

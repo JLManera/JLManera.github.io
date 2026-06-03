@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Manera | Research</title>
+    <meta name="description" content="Current research and publications by Jack Manera on behavioural ecology and ecotoxicology in aquatic animals.">
+    <meta name="keywords" content="Jack Manera, research, publications, behavioural ecology, ecotoxicology, pharmaceutical pollution">
+    <meta property="og:title" content="Jack Manera | Research">
+    <meta property="og:description" content="Investigating how anthropogenic disturbances reshape behaviour and cognition in aquatic animals.">
+    <meta property="og:url" content="https://www.jackmanera.com/research.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.jackmanera.com/research.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5e3a;
+            --primary-light: #2d8a56;
+            --primary-dark: #0f3d25;
+            --accent: #3a7ca5;
+            --accent-light: #5ba3c9;
+            --bg: #fafaf8;
+            --bg-alt: #f0efe9;
+            --text: #2c2c2c;
+            --text-light: #5a5a5a;
+            --text-lighter: #888;
+            --white: #ffffff;
+            --border: #ddd;
+            --shadow: 0 2px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            --radius: 8px;
+            --transition: 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: var(--transition);
+        }
+        nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .nav-brand {
+            font-family: 'Lora', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+        .nav-links { display: flex; list-style: none; gap: 0.25rem; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+            background: rgba(26,94,58,0.06);
+        }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 0.5rem;
+        }
+
+        /* ── Sections ── */
+        section { padding: 5rem 2rem; }
+        section.first-section { padding-top: 8rem; }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* ── Research ── */
+        #research { background: var(--bg); }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .research-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .research-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .research-card .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        .research-card .card-icon.green { background: rgba(26,94,58,0.1); color: var(--primary); }
+        .research-card .card-icon.blue { background: rgba(58,124,165,0.1); color: var(--accent); }
+        .research-card .card-icon.teal { background: rgba(0,128,128,0.1); color: teal; }
+        .research-card .card-icon.amber { background: rgba(180,130,20,0.1); color: #b48214; }
+
+        .research-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .research-card p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .research-card .status-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
+
+        .status-badge.published { background: rgba(26,94,58,0.1); color: var(--primary); }
+        .status-badge.review { background: rgba(58,124,165,0.1); color: var(--accent); }
+        .status-badge.active { background: rgba(180,130,20,0.1); color: #b48214; }
+        .status-badge.planning { background: rgba(150,150,150,0.1); color: #888; }
+
+        /* ── Publications ── */
+        #publications { background: var(--white); }
+
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .pub-item {
+            background: var(--bg);
+            padding: 1.5rem 2rem;
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .pub-item:hover { box-shadow: var(--shadow); }
+
+        .pub-year {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--white);
+            background: var(--primary);
+            padding: 0.15rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+            line-height: 1.5;
+        }
+
+        .pub-title a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .pub-title a:hover { color: var(--accent); }
+
+        .pub-authors {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-authors .me {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .pub-journal {
+            font-size: 0.88rem;
+            color: var(--text-lighter);
+            font-style: italic;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: block; }
+            .research-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Animations ── */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .js-enabled .fade-in { opacity: 0; transform: translateY(20px); }
+        .js-enabled .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Jack L. Manera</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">About</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Current Research Section -->
+<section id="research" class="first-section">
+    <div class="section-inner">
+        <h2 class="section-title fade-in">Current research</h2>
+        <p class="section-subtitle fade-in">Investigating how anthropogenic disturbances reshape behaviour and cognition in aquatic animals</p>
+        <div class="research-grid">
+            <div class="research-card fade-in">
+                <div class="card-icon green"><i class="fas fa-users"></i></div>
+                <h3>Pharmaceutical Pollutants &amp; Collective Behaviour</h3>
+                <p>Investigating how the benzodiazepine temazepam disrupts shoaling dynamics, collective motion, and local interaction rules in guppies. Exposure alters alignment, cohesion, and velocity in a dose- and phenotype-dependent manner, revealing that group composition modulates vulnerability to contamination.</p>
+                <span class="status-badge active">In preparation</span>
+            </div>
+            <div class="research-card fade-in">
+                <div class="card-icon blue"><i class="fas fa-brain"></i></div>
+                <h3><a href="https://doi.org/10.1021/acs.est.6c00552" target="_blank" style="color: inherit;">Neuroactive Pollution &amp; Spatial Cognition</a></h3>
+                <p>Testing whether the antidepressant amitriptyline impairs spatial learning in wild-caught guppies. Using repeated-trial maze assays, I found sex-specific cognitive impairment: exposed males make significantly more navigational errors, while female learning remains unaffected.</p>
+                <span class="status-badge published">Published &mdash; ES&amp;T</span>
+            </div>
+            <div class="research-card fade-in">
+                <div class="card-icon teal"><i class="fas fa-exclamation-triangle"></i></div>
+                <h3>Fear Contagion &amp; Pharmaceutical Contamination</h3>
+                <p>Examining whether amitriptyline disrupts socially transmitted antipredator responses (fear contagion) in guppies. Exposed observers show impaired behavioural coupling with demonstrators and slower recovery dynamics when relying solely on social information.</p>
+                <span class="status-badge active">Current focus &mdash; In preparation</span>
+            </div>
+            <div class="research-card fade-in">
+                <div class="card-icon amber"><i class="fas fa-exchange-alt"></i></div>
+                <h3>Interspecific Information Transfer</h3>
+                <p>An upcoming study assessing whether invasive guppies can eavesdrop on antipredator cues from native Australian rainbowfish, and whether pharmaceutical pollutants disrupt this cross-species social learning&mdash;with implications for invasion ecology and conservation.</p>
+                <span class="status-badge planning">In planning</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications Section -->
+<section id="publications">
+    <div class="section-inner">
+        <h2 class="section-title fade-in">Publications</h2>
+        <p class="section-subtitle fade-in">Peer-reviewed journal articles</p>
+        <div class="pub-list">
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2026</span>
+                <div class="pub-title"><a href="https://doi.org/10.1021/acs.est.6c00552" target="_blank">Neuroactive pollution disrupts cognition in fish by causing sex-specific effects on spatial learning</a></div>
+                <div class="pub-authors"><span class="me">Manera, J.L.</span>, Moore, E.R., Martin, J.M., Bertram, M.G., Wong, B.B.M.</div>
+                <div class="pub-journal">Environmental Science &amp; Technology</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2026</span>
+                <div class="pub-title">Environmentally safe and just pharmacy: a framework and action plan for operating within the earth system boundary for novel entities</div>
+                <div class="pub-authors">Boxall, A.B.A., Amerasinghe, P., Bertram, M.G., Gaw, S., Gray, A.D., Kidd, K., Langan, L.M., Leung, K.M.Y., <span class="me">Manera, J.L.</span>, Miglioranza, K.S.B., Oldenkamp, R., Brooks, B.W.</div>
+                <div class="pub-journal">Environmental Science &amp; Technology</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2026</span>
+                <div class="pub-title">Exposure to the oestrogenic pollutant 17&alpha;-ethinyl estradiol (EE2) does not alter the behaviour of a coastal marine fish, <em>Cristiceps australis</em></div>
+                <div class="pub-authors">Ozeki, S., Eastment, R.V., <span class="me">Manera, J.L.</span>, Rafeeq, R., Peters, A., Martin, J.M., Wong, B.B.M.</div>
+                <div class="pub-journal">Ethology</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2025</span>
+                <div class="pub-title"><a href="https://doi.org/10.1093/beheco/araf110" target="_blank">Boat noise alters individual behaviors but not communication between partners in a fish-shrimp mutualism</a></div>
+                <div class="pub-authors"><span class="me">Manera, J.L.</span>, Martin, J.M., Palacios, M.M., Mason, R.T., McCormick, M.I., Wong, B.B.M.</div>
+                <div class="pub-journal">Behavioral Ecology, 36(5), araf110</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2025</span>
+                <div class="pub-title">Are behavioral ecotoxicity endpoints relevant at the population level? Evidence-based insights for environmental protection</div>
+                <div class="pub-authors">Bertram, M.G., &Aring;gerstrand, M., Balshine, S., Brand, J.A., Brooks, B.W., Dang, Z., Ford, A.T., Hollert, H., LeFauve, M.K., <span class="me">Manera, J.L.</span>, Martin, J.M., Michelangeli, M., Moiron, M., Moore, E.R., Puglis, H.J., Sih, A., Steevens, J.A., Thor&eacute;, E.S.J., Wong, B.B.M., Zink, L., Brodin, T.</div>
+                <div class="pub-journal">Environmental Science &amp; Technology</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2025</span>
+                <div class="pub-title">The impacts of pesticide exposure on fish conspecific interactions: a systematic review and meta-analysis</div>
+                <div class="pub-authors">Morrison, K., Melhado, G., Bose, A.P.H., Eastment, R., Lagisz, M., <span class="me">Manera, J.L.</span>, Michelangeli, M., Ozeki, S., Wong, B.B.M., Yang, Y., Nakagawa, S.</div>
+                <div class="pub-journal">Environmental Pollution</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2025</span>
+                <div class="pub-title">Sex-specific effect of long-term fluoxetine exposure on inhibitory control in guppies (<em>Poecilia reticulata</em>)</div>
+                <div class="pub-authors">Vinogradov, I.M., Aich, U., <span class="me">Manera, J.L.</span>, Fergusson, K.N., Jennions, M.D., Wong, B.B.M.</div>
+                <div class="pub-journal">Behavioral Ecology and Sociobiology</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2024</span>
+                <div class="pub-title"><a href="https://doi.org/10.1016/j.scitotenv.2024.173055" target="_blank">Anthropogenic noise disrupts early-life development in a fish with paternal care</a></div>
+                <div class="pub-authors">Blom, E.L., Dekhla, I.K., Bertram, M.G., <span class="me">Manera, J.L.</span>, Kvarnemo, C., Svensson, O.</div>
+                <div class="pub-journal">Science of the Total Environment, 935, 173055</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2023</span>
+                <div class="pub-title"><a href="https://doi.org/10.1111/eth.13403" target="_blank">No evidence that the widespread environmental contaminant caffeine alters energy balance or stress responses in fish</a></div>
+                <div class="pub-authors">Tan, H., Brand, J.A., Clarke, B.O., <span class="me">Manera, J.L.</span>, Martin, J.M., Wong, B.B.M., Alton, L.A.</div>
+                <div class="pub-journal">Ethology, 129, 666&ndash;678</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <span class="pub-year">2023</span>
+                <div class="pub-title">Increased noise levels cause behavioural and distributional changes in Atlantic cod and saithe in a large public aquarium&mdash;A case study</div>
+                <div class="pub-authors">Andersson, M., Svensson, O., Swartz, T., <span class="me">Manera, J.L.</span>, Bertram, M.G., Blom, E.L.</div>
+                <div class="pub-journal">Aquaculture, Fish and Fisheries</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    &copy; 2026 Jack L. Manera.
+</footer>
+
+<script>
+    document.documentElement.classList.add('js-enabled');
+
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('open');
+        });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
