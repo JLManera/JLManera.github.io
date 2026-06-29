@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Manera | Contact</title>
-    <meta name="description" content="Get in touch with Jack Manera at Monash University for research, collaboration, or science communication enquiries.">
-    <meta name="keywords" content="Jack Manera, contact, Monash University, collaboration">
-    <meta property="og:title" content="Jack Manera | Contact">
-    <meta property="og:description" content="Get in touch about research, collaboration, or science communication.">
-    <meta property="og:url" content="https://www.jackmanera.com/contact.html">
+    <title>Jack Manera | CV</title>
+    <meta name="description" content="Download the curriculum vitae of Jack Manera, an early-career researcher in behavioural ecology and ecotoxicology at Monash University.">
+    <meta name="keywords" content="Jack Manera, CV, curriculum vitae, resume, behavioural ecology, ecotoxicology, Monash University">
+    <meta property="og:title" content="Jack Manera | CV">
+    <meta property="og:description" content="Download a copy of Jack Manera's curriculum vitae.">
+    <meta property="og:url" content="https://www.jackmanera.com/cv.html">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://www.jackmanera.com/contact.html">
+    <link rel="canonical" href="https://www.jackmanera.com/cv.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -45,9 +45,6 @@
             background: var(--bg);
             line-height: 1.7;
             font-size: 16px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         /* ── Navigation ── */
@@ -104,7 +101,7 @@
         }
 
         /* ── Sections ── */
-        section { padding: 5rem 2rem; flex: 1; }
+        section { padding: 5rem 2rem; }
         section.first-section { padding-top: 8rem; }
         .section-inner { max-width: 1100px; margin: 0 auto; }
         .section-title {
@@ -117,92 +114,65 @@
         .section-subtitle {
             color: var(--text-light);
             font-size: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
-        /* ── Contact ── */
-        #contact {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: var(--white);
-        }
+        /* ── CV page ── */
+        #cv-page { background: var(--bg); }
 
-        #contact .section-title { color: var(--white); }
-        #contact .section-subtitle { color: rgba(255,255,255,0.7); }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info p {
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .contact-details {
+        .cv-actions {
             display: flex;
-            flex-direction: column;
             gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
         }
 
-        .contact-details a {
-            display: flex;
+        .cv-btn {
+            display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            color: rgba(255,255,255,0.85);
+            gap: 0.6rem;
             text-decoration: none;
             font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
             transition: var(--transition);
         }
 
-        .contact-details a:hover { color: var(--white); }
-        .contact-details i { width: 20px; text-align: center; }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cv-btn.primary {
+            background: var(--primary);
             color: var(--white);
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: var(--transition);
+            border: 1px solid var(--primary);
+        }
+        .cv-btn.primary:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
 
-        .social-links a:hover {
-            background: rgba(255,255,255,0.15);
-            border-color: rgba(255,255,255,0.5);
+        .cv-btn.outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        .cv-btn.outline:hover {
+            background: rgba(26,94,58,0.06);
         }
 
-        .contact-map {
-            background: rgba(255,255,255,0.1);
+        .cv-preview {
+            width: 100%;
+            height: 85vh;
+            border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 2rem;
-            text-align: center;
+            box-shadow: var(--shadow);
+            background: var(--white);
         }
 
-        .contact-map h3 {
-            font-family: 'Lora', serif;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-map p {
-            color: rgba(255,255,255,0.7);
+        .cv-fallback {
+            margin-top: 1rem;
             font-size: 0.9rem;
-            line-height: 1.7;
+            color: var(--text-light);
         }
+        .cv-fallback a { color: var(--accent); }
 
         /* ── Footer ── */
         footer {
@@ -228,7 +198,7 @@
             }
             .nav-links.open { display: flex; }
             .hamburger { display: block; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .cv-preview { height: 70vh; }
         }
 
         /* ── Animations ── */
@@ -254,45 +224,31 @@
             <li><a href="index.html">About</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="software.html">Software</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="cv.html" class="active">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- Contact Section -->
-<section id="contact" class="first-section">
+<!-- CV Section -->
+<section id="cv-page" class="first-section">
     <div class="section-inner">
-        <h2 class="section-title fade-in">Get in Touch</h2>
-        <p class="section-subtitle fade-in">I'm always happy to chat about research, collaboration, or science communication</p>
-        <div class="contact-grid">
-            <div class="contact-info fade-in">
-                <p>Whether you're interested in behavioural ecotoxicology, have questions about my R package, or want to discuss potential collaboration, feel free to reach out.</p>
-                <div class="contact-details">
-                    <a href="mailto:Jack.Manera@monash.edu"><i class="fas fa-envelope"></i> Jack.Manera@monash.edu</a>
-                    <a href="https://www.monash.edu/science/schools/biological-sciences" target="_blank"><i class="fas fa-university"></i> School of Biological Sciences, Monash University</a>
-                    <a href="https://www.bobwonglab.org/" target="_blank"><i class="fas fa-flask"></i> Behavioural Ecology Research Group (Wong Lab)</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://scholar.google.com.au/citations?user=ed1qm2EAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://github.com/JLManera" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://orcid.org/0009-0003-7947-6473" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-                    <a href="https://bsky.app/profile/jackmanera.bsky.social" target="_blank" title="Bluesky"><i class="fab fa-bluesky"></i></a>
-                    <a href="https://twitter.com/jack_manera" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://au.linkedin.com/in/jack-manera-bb162b118" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="contact-map fade-in">
-                <h3>Location</h3>
-                <p>
-                    School of Biological Sciences<br>
-                    Monash University<br>
-                    Clayton Campus<br>
-                    Melbourne, Victoria 3800<br>
-                    Australia
-                </p>
-            </div>
+        <h2 class="section-title fade-in">Curriculum Vitae</h2>
+        <p class="section-subtitle fade-in">Download or preview a copy of my full CV</p>
+        <div class="cv-actions fade-in">
+            <a class="cv-btn primary" href="Jack_Manera_CV.pdf" download>
+                <i class="fas fa-download"></i> Download CV (PDF)
+            </a>
+            <a class="cv-btn outline" href="Jack_Manera_CV.pdf" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> Open in new tab
+            </a>
         </div>
+        <object class="cv-preview fade-in" data="Jack_Manera_CV.pdf" type="application/pdf">
+            <p class="cv-fallback">
+                Your browser can&rsquo;t display the embedded PDF.
+                <a href="Jack_Manera_CV.pdf" download>Download the CV here</a> instead.
+            </p>
+        </object>
     </div>
 </section>
 
